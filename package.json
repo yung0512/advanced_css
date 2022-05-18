@@ -1,0 +1,15 @@
+{
+  "name": "advanced_css",
+  "version": "1.0.0",
+  "description": "practice css concept",
+  "main": "index.js",
+  "repository": "git@github.com:yung0512/advanced_css.git",
+  "author": "yung0512 <jeff8651215@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css"
+  }
+}
