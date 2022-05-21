@@ -1,4 +1,6 @@
 .btn{
+  // the <button> doesn't have those suedo element
+  &,
   &:link,  /*when a link is unvisited*/
   &:visited { /*when a link has already be visited(clicked?)*/
     text-transform: uppercase;
@@ -8,9 +10,13 @@
     border-radius: 100px;
     transition: all .2s;
     position: relative;
+
+    //Change for the <button> element
+    border: none;
+    cursor: pointer;
   }
   
-  &:hover{
+  &:hover {
     transform: translateY(-3px);
     box-shadow: 0 5px 10px rgba(0,0,0,.2);/*X Y blur color*/
     
@@ -20,8 +26,11 @@
     }
   }
   
-  &:active{
+  &:active,
+  &:focus {
+    outline: none;
     transform: translateY(-1px);
+    box-shadow: 0 .5rem 1rem rgba($color-black, .15);
   }
   
   &--white{
@@ -41,7 +50,7 @@
         background-color: $color-primary;
     }
   }
-  
+
   &::after {
     content:"";/*if use ::after or ::before need to declare it content*/
     display: inline-block;
